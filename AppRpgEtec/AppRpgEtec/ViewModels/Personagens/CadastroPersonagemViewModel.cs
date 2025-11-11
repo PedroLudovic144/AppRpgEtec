@@ -17,7 +17,7 @@ namespace AppRpgEtec.ViewModels.Personagens
         private PersonagemService pService;
         public ICommand SalvarCommand { get; }
         public ICommand CancelarCommand { get; set; }
-        
+
 
         public CadastroPersonagemViewModel()
         {
@@ -197,7 +197,7 @@ namespace AppRpgEtec.ViewModels.Personagens
                     Classe = (ClasseEnum)tipoClasseSelecionado.Id
                 };
                 if (model.Id == 0)
-                    await pService.PostPersonagemAsync(model);               
+                    await pService.PostPersonagemAsync(model);
                 else
                     await pService.PutPersonagemAsync(model);
 
